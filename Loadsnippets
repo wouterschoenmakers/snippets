@@ -1,0 +1,29 @@
+# function for generic files
+
+
+def list_files(filetype: str,path: str = os.getcwd()):
+    import os
+    """
+    A function that list the files of a specific type in a specific path
+    ______
+    Parameters:
+        Required:
+            filetype: str
+                Filetype of the documents, E.g.: csv, txt, dat etc.
+        Optional
+            path: str
+                Path of the documents, default is current directory
+    ______________
+    Returns
+        list of files in the specified path
+    """
+    
+    files_cd = os.listdir(path)
+    
+    return [item for item in files_cd if item.endswith(filetype)]
+
+
+
+
+
+
